@@ -117,11 +117,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       totalMatchingOrgs += matchingOrgCount
     }
 
-    var text = ' results found'
-    if (totalMatchingOrgs === 1) {
-      text = ' result found'
-    }
-    this.results.innerHTML = totalMatchingOrgs + text
+    this.results.innerHTML = totalMatchingOrgs + ' result' + (totalMatchingOrgs === 1 ? '':'s') + ' found';
   }
 
   Modules.FilterOrganisations = FilterOrganisations
